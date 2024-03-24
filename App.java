@@ -16,8 +16,9 @@ public class App
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("/com/spring/orm/config.xml");
         StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
-        Student student = new Student(1010, "harsh", "Mumbai");
-        int rowsAffected = studentDao.insert(student);
-        System.out.println(rowsAffected);
+//        Student student = new Student(1010, "harsh", "Mumbai");
+//        int rowsAffected = studentDao.insert(student);
+        Student student = studentDao.getStudent(1010);
+        System.out.println(student);
     }
 }
