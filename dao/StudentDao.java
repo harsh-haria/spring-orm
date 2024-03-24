@@ -18,7 +18,7 @@ public class StudentDao {
     }
     
     public Student getStudent(int studentId) {
-    	Student student = this.hibernateTemplate.get(Student.class,1010);
+    	Student student = this.hibernateTemplate.get(Student.class,studentId);
     	return student;
     }
     
